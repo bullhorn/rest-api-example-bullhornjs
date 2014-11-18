@@ -1,0 +1,12 @@
+{
+  "name": "BullhornRoulette",
+  "version": "0.0.1",
+  "main": [
+    "./build/app.js"
+  ],
+  "dependencies": {
+    "angular": "git://github.com/angular/bower-angular.git#1.2.18",
+    "bullhornjs": "git://github.com/bullhorn/bullhornjs.git",
+    "jquery": "git://github.com/components/jquery.git#2.1.1"
+  }
+}

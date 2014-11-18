@@ -1,0 +1,26 @@
+{
+  "name": "BullhornRoulette",
+  "version": "0.0.1",
+  "description": "Sample Application for using the BULLHORN® REST API",
+  "author": {
+  	"name": "Bullhorn, Inc"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">= 0.8.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.x",
+    "grunt-bower": "0.14.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-html2js": "*",
+    "grunt-task-loader": "*"
+  }
+}

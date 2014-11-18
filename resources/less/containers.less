@@ -1,0 +1,102 @@
+//
+// Layouts
+// --------------------------------------------------
+group {
+    width: 100% !important;
+}
+hgroup, vgroup {
+    display: -webkit-box;
+    display: -moz-box;
+  	display: box;
+  	position: relative;
+  	margin: 0px !important;
+}
+hgroup {
+	-webkit-box-orient: horizontal;
+  	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+}
+vgroup {
+  	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+vgroup > * {
+    display: block !important;   
+}
+hgroup[align="left"], vgroup[align="top"] {
+    -webkit-box-align: start;
+	-moz-box-align: start;
+	box-align: start;
+}
+hgroup[align="right"], vgroup[align="bottom"] {
+	-webkit-box-align: end;
+	-moz-box-align: end;
+	box-align: end;
+}
+hgroup[align="center"], vgroup[align="middle"] {
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+}
+hgroup[align="bottom"], vgroup[align="baseline"] {
+	-webkit-box-align: baseline;
+	-moz-box-align: baseline;
+	box-align: baseline;
+}
+hgroup[align="justify"], vgroup[align="justify"] {
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	box-align: stretch;
+}
+hgroup[gap="10"] > * {
+    margin-left: 5px;
+	margin-right: 5px;
+}
+hgroup[gap="20"] > * {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+hgroup[gap="30"] > * {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+hgroup[gap="10"] > hgroup, hgroup[gap="10"] > vgroup {
+    padding-left: 5px;
+	padding-right: 5px;
+}
+hgroup[gap="20"] > hgroup, hgroup[gap="20"] > vgroup {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+hgroup[gap="30"] > hgroup, hgroup[gap="30"] > vgroup {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+hgroup[gap] > *:first-child {
+	margin-left: 0px !important;
+    padding-left: 0px;
+}
+hgroup[gap] > *:last-child {
+	margin-right: 0px !important;
+    padding-right: 0px;
+}
+vgroup[gap="10"] > * {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+vgroup[gap="20"] > * {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+vgroup[gap="30"] > * {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+vgroup[gap] > *:first-child {
+	margin-top: 0px !important;
+}
+vgroup[gap] > *:last-child {
+	margin-bottom: 0px !important;
+}
