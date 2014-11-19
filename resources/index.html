@@ -15,13 +15,13 @@
     <div id="stage">
       <div id="rotate">
         <div id="ring-1" class="ring">
-          <div ng-repeat="(i, v) in jobs" class="poster" style="-webkit-transform: rotateX({{30*i}}deg) translateZ(200px); ">
+          <div ng-repeat="(i, v) in jobs track by $index" class="poster" style="-webkit-transform: rotateX({{30*i}}deg) translateZ(200px); ">
             <p>{{v.title}}</p>
             <span if="v.clientCorporation">{{v.clientCorporation.name}}</span>
           </div>
         </div>
         <div id="ring-2" class="ring">
-          <div ng-repeat="(i, v) in candidates" class="poster" style="-webkit-transform: rotateX({{30*i}}deg) translateZ(200px); ">
+          <div ng-repeat="(i, v) in candidates track by $index" class="poster" style="-webkit-transform: rotateX({{30*i}}deg) translateZ(200px); ">
             <p>{{v.name}}</p>
             <span if="v.phone">{{v.phone}}</span>
           </div>

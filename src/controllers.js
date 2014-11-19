@@ -9,12 +9,10 @@ function MainCtrl($scope, $http, $location, $timeout) {
     var login = "http://jimmy-backend:8181/core/oauth/authorize";
     var bh = new Bullhorn();
     bh.authenticate(login).then(function(ping){
-        var me = Bullhorn.user.id;
-
         var js = new JobSearch()
             .fields('id', 'title')
             .params({count:20, showTotalMatched:true})
-            .query('isDeleted:0 AND owner.id:'+me);
+            .query('isDeleted:0');
 
         var cs = new CandidateSearch()
             .fields('id', 'name')
@@ -48,13 +46,12 @@ function MainCtrl($scope, $http, $location, $timeout) {
     }
 
     $scope.getRandomJob = function(){
-        var me = Bullhorn.user.id,
-            n = Math.floor(Math.random() * $scope.totalJobs + 1);
+        var n = Math.floor(Math.random() * $scope.totalJobs + 1);
 
         var job = new JobSearch()
             .fields('id','title','clientCorporation(name)')
             .params({start:n,count:1})
-            .query('isDeleted:0 AND owner.id:'+me);
+            .query('isDeleted:0');
 
         job.run().then(function(data){
             $scope.jobs[12] = job.records[0];
@@ -63,13 +60,12 @@ function MainCtrl($scope, $http, $location, $timeout) {
     }
 
     $scope.getRandomCandidate = function(){
-        var me = Bullhorn.user.id,
-        n = Math.floor(Math.random() * $scope.totalCandidates + 1);
+        var n = Math.floor(Math.random() * $scope.totalCandidates + 1);
 
         var candidate = new CandidateSearch()
             .fields('id','name','phone','mobile')
             .params({start:n,count:1})
-            .query('isDeleted:0'); // AND recruiterIDs:'+me);
+            .query('isDeleted:0');
 
         candidate.run().then(function(data){
             $scope.candidates[12] = candidate.records[0];
