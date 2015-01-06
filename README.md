@@ -4,6 +4,7 @@
 An AngularJS example for using Bullhorn's Javascript Api
 
 Step 1: Download and Install [NodeJS](http://nodejs.org/)
+
 Step 2: Clone this repository
 ```
 $ git clone git@github.com:bullhorn/rest-api-example-bullhornjs.git
